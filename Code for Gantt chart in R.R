@@ -18,5 +18,5 @@ vgridpos<-as.POSIXct(strptime(c("2017/06/01","2017/07/01","2017/08/01",
                                 "2018/09/01","2018/10/01","2018/11/01"),format=Ymd.format))
 vgridlab<-
   c("Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov")
-gantt.chart(gantt.info,main=" ",
+gantt.chart(gantt.info,main="Thesis workflow for year 2017-18",
             priority.legend=FALSE,half.height=0.45,vgridpos=vgridpos,vgridlab=vgridlab,xlab="Months",hgrid=TRUE)
