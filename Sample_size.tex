@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = blue]{hyperref}
+
+\renewcommand\theequation{{\color{blue}\arabic{equation}}}
+
+\title{Sample size for various studies}
+\author{Dr Suman Khanal, MS\footnote{\textbf{\copyright} Dr Suman Khanal \textbf{2017}}\\ Kathmandu}
+\date{July 1, 2017\footnote{Made with $\heartsuit$ with \href{https://www.latex-project.org/}{\LaTeXe}}}
+
+\begin{document}
+\maketitle
+
+
+\section*{Sample size}	
+
+\section{Cross sectional studies/surveys}
+
+\subsection{Qualitative variable}
+	Suppose an epidemiologist want to know proportion of 
+	children who are hypertensive in a population then this 
+	formula should be used as proportion is a qualitative 
+	variable.
+	
+\begin{equation}
+Sample size =  \dfrac{1.96\times 1.96\times p(1-p)}{d^2}
+\end{equation}
+where,\\ 
+p  =  Expected  proportion  in  population  based  on  
+previous studies or pilot studies.\\
+d  =  Absolute  error  or  precision  –  Has  to  be  decided  
+by researcher.
+
+\subsection{Quantitative variable}
+Suppose the same researcher is interested in knowing 
+average systolic blood pressure of children of the same 
+city then below mentioned formula should be used as 
+blood pressure is a quantitative variable.
+
+\begin{equation}
+Sample size=\dfrac{1.96\times 1.96\times {SD}^2}{d^2}
+\end{equation}
+where,\\
+SD = Standard deviation of variable. Value of standard 
+deviation can be taken from previously done study or 
+through pilot study.\\
+d  =  Absolute  error  or  precision  as  mentioned previously
+
+
+\section{Case-control studies}
+
+\subsection{Qualitative variable}
+Suppose  a  researcher  want  to  see  the  link  between  
+childhood  sexual  abuses  with  psychiatric  disorder  in  
+adulthood.  He  will  take  a  sample  of  adult  persons  
+with psychiatric disorder and will take another sample 
+of normal adults having no psychiatric disorders. He 
+will then go retrospectively to see history of childhood 
+sexual abuse in both groups. Exposure to both groups 
+will be compared and odds ratio will be calculated. Here 
+number of people exposed to childhood sexual abuse 
+is qualitative variable hence this formula will be used 
+for such type of design.
+
+\begin{equation}
+Sample size =\dfrac{r+1}{r}\dfrac{(p^*)(1-p^*)(Z_\beta+Z_{\alpha/2})^2}{(p_1-p_2)^2}
+\end{equation}
+where,\\
+r = Ratio  of  control  to  cases,  1  for  equal  number  of  
+case and control\\
+p*  =  Average  proportion  exposed  =  (proportion  of  
+exposed cases + proportion of control exposed)/2\\
+$Z_\beta$ =  Standard  normal  variate  for  power  =  for  80\%  
+power it is 0.84 and for 90\% is 1.28. Researcher 
+has to select power for the study.\\
+$Z_{\alpha/2}$ = Standard normal variate for level of significance 
+as mentioned in previous section.\\
+$p_1-p_2$= Effect size or different in proportion expected 
+based on previous studies. $p_1$ is proportion in cases and 
+$p_2$ is proportion in control.
+
+\subsection{Quantitative variable}
+
+Suppose  a  researcher  wants  to  see  the  association  
+between birth weight and diabetes in adulthood. The 
+birth weight being a quantitative data, the researcher will 
+select one group i.e. cases that will be diabetic adults and 
+other group i.e. control will be non‑diabetic adults. Both 
+groups will be traced back for data regarding childhood 
+weight. The formula for sample size calculation is:
+
+\begin{equation}
+Sample size=\dfrac{r+1}{r}\dfrac{SD^2(Z_\beta+Z_{\alpha/2})^2}{d^2}
+\end{equation}
+where,\\
+SD = Standard deviation = researcher can take value 
+from previously published studies\\
+d  =  Expected  mean  difference  between  case  and  
+control (may be based on previously published studies.)\\
+r = Ratio  of  control  to  cases,  1  for  equal  number  of  
+case and control\\
+$Z_\beta$ =  Standard  normal  variate  for  power  =  for  80\%  
+power it is 0.84 and for 90\% is 1.28. Researcher 
+has to select power for the study.\\
+$Z_{\alpha/2}$ = Standard normal variate for level of significance 
+as mentioned in previous section.
+
+
+\section{Cohort studies}
+
+
+\subsection{title}
+
+
+\begin{equation}
+Sample size=\dfrac{Z_\alpha\sqrt{1+\dfrac{1}{m}p^*(1-p^*)}+Z_\beta\sqrt{\dfrac{p_1(1-p_1)}{m}+p_2(1-p_2)}}{(p_1-p_2)^2}
+\end{equation}
+
+$p^*=\dfrac{p_2+mp_1}{m+1}$
+
+$p_1$=control group
+
+$p_2$=experimental group\\
+
+
+
+\textbf{\large These formulas are for independent design studies. Not for matched case control and cohort studies.}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
