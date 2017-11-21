@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usepackage{amsmath, amssymb}
+\usetikzlibrary{shapes,arrows}
+\begin{document}
+%\pagestyle{empty}
+
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=7em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+
+
+    
+ \begin{figure}
+ \centering
+  
+    
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (init) {Parathyroid Adenoma};
+    
+    \node [block, below of=init] (identify) {High levels of PTH, Ca2+};
+    \node [block, below of=identify] (evaluate) {\textbf{Other} parathyroids are \textbf{suppressed}};
+    \node [decision, below of=evaluate] (decide) {Once adenoma removed};
+    \node [block, below of=decide, node distance=3cm] (stop) {PTH, Ca2+ falls};
+	\node [block, below of=stop, node distance=3cm] (final) {PTH \textbf{gradually increases to normal} once the \textbf{suppressed} parathyroid pick up};
+    % Draw edges
+    \path [line] (init) -- (identify);
+    \path [line] (identify) -- (evaluate);
+    \path [line] (evaluate) -- (decide);
+    
+    \path [line] (decide) -- (stop);
+	\path [line] (stop) -- (final);
+	    
+\end{tikzpicture}
+	\caption{Why PTH level will remain decreased initially after removal of adenoma.}
+	
+\end{figure}  
+
+
+\end{document}
