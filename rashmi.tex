@@ -1,0 +1,495 @@
+\documentclass[11pt]{beamer}
+
+\usetheme{metropolis}
+%\usecolortheme{beaver}
+\usepackage{graphicx}
+\usepackage{soul, color} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{pgf}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\setul{0.3ex}{0.4ex}
+
+
+\setbeamercovered{highly dynamic}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\resetcounteronoverlays{saveenumi}
+
+
+
+
+\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+		\put(\LenToUnit{0.9\paperwidth},\LenToUnit{0.85\paperheight}){#1}}}
+\AddToShipoutPictureFG{
+	\AtPagemyUpperLeft{{\includegraphics[height=12mm,width=12mm]{TUlogo.png}}}
+}
+
+
+
+%\setbeamertemplate{footline}[frame number]
+
+
+\title[Patch test in ACD]{PATTERN OF PATCH TEST REACTIVITY IN \\[5pt]  ALLERGIC CONTACT DERMATITIS \\[5pt] IN A TERTIARY HOSPITAL} % The short title appears at the bottom of every slide, the full title is only on the title page
+%\subtitle{Here it is}
+\author[Dr Rashmi Sharma]{Dr Rashmi Sharma \\ [5pt] MD Resident, Dermatology} % Your name
+\institute[TUTH] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+	Tribhuvan University Teaching Hospital \\ % Your institution for the title page
+	\medskip
+	\textit{rashmee652@gmail.com} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+
+
+\begin{document}
+	
+	\begin{frame}
+	\titlepage 
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+\begin{itemize}
+	\item ACD is an immunological reaction that occurs in genetically susceptible people who have been previously sensitized to an allergen.
+	\item This is in contrast to ICD, which can occur in any person if the amount and duration of irritant exposure are sufficient to cause direct epidermal keratinocyte damage.\footnotemark 
+	\footnotetext{Mark BJ, Slavin RG. Allergic Contact Dermatitis. \textit{Med Clin North Am.} 2006;90(1):169-185. doi:10.1016/j.mcna.2005.08.008.}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item When a genetically susceptible person’s skin comes in contact with an allergen for the first time, the allergen enters the stratum corneum and binds to carrier protein.
+\item The allergen protein complex is engulfed by Langerhans cells in the epidermis and subsequently processed and presented to naive T cells in the regional lymph nodes.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item This presentation leads to clonal proliferation and release of memory TH1 cells into the circulation.
+\item Upon re-exposure of the allergen, the circulating memory TH1 cells enter the skin at the site of allergen exposure and release inflammatory cytokines that lead to spongiosis and inflammatory infiltrate typically seen in allergic contact dermatitis.\footnotemark[1]
+\end{itemize}
+\footnotetext{Mark BJ, Slavin RG. Allergic Contact Dermatitis. \textit{Med Clin North Am.} 2006;90(1):169-185. doi:10.1016/j.mcna.2005.08.008.}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item Patients with ACD typically present with well demarcated eczematous dermatitis. The hands and face are the most common localized areas.\footnote{Zug KA, Warshaw EM, Fowler JF, et al. Patch-test results of the North American Contact Dermatitis Group 2005-2006. \textit{Dermat  contact, atopic, Occup drug.} 20(3):149-160. http://www.ncbi.nlm.nih.gov/pubmed/19470301. Accessed December 2, 2016.
+}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item There is almost always associated pruritus. 
+\item If the process is acute, there may be vesicles and bullae. If the process is chronic, there may be scaling and lichenification.\footnotemark
+\end{itemize}
+
+\footnotetext{Kostner L, Anzengruber F, Guillod C, Recher M, Schmid-Grendelmeier P, Navarini AA. Allergic Contact Dermatitis. \textit{Immunol Allergy Clin North Am.} 2017;37(1):141-152. doi:10.1016/j.iac.2016.08.014.}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item Typically but not always the process is confined to the site of cutaneous exposure.
+\item Systemic and photosensitive ACD are less commonly encountered presentations.\footnotemark[3]
+\end{itemize}
+\footnotetext{Kostner L, Anzengruber F, Guillod C, Recher M, Schmid-Grendelmeier P, Navarini AA. Allergic Contact Dermatitis. \textit{Immunol Allergy Clin North Am.} 2017;37(1):141-152. doi:10.1016/j.iac.2016.08.014.
+}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item More than 3000 chemicals have been described to cause allergic contact dermatitis in human beings.
+\item The use of patch testing to diagnose ACD was first developed by Josef Jadassohn in 1895.\footnote{Cohen DE. Contact dermatitis: A quarter century perspective. \textit{J Am Acad Dermatol.} 2004;51(1):60-63. doi:10.1016/j.jaad.2003.01.002}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item In 1995, the USFDA approved the first ready to use patch testing system. The introduction of Thin Layer Rapid Use Epicutaneous Test (TRUE Test) has made patch testing more convenient.\footnote{Nelson JL, Mowad CM. Allergic Contact Dermatitis: Patch Testing Beyond the \textbf{TRUE} Test. \textit{J Clin Aesthet Dermatol.} 2010;3(10):36-41. http://www.ncbi.nlm.nih.gov/pubmed/20967194. Accessed November 22, 2016.
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item Patch testing is considered gold standard in the diagnosis of ACD.\footnote{Farrell AL, Warshaw EM, Zhao Y, Nelson D. Prevalence and Methodology of Patch Testing by Allergists in the United States: Results of a Cross-Sectional Survey. \textit{Am J Contact Dermat.} 2002;13(4):157-163. doi:10.1053/ajcd.2002.36642}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item Proper history complements but does not substitute the patch test in diagnosing ACD.\footnote{Jerajani HR, Melkote S. Thin-layer rapid-use epicutaneous test (TRUE test). \textit{Indian J Dermatol Venereol Leprol.} 2007;73(5):292-295. doi:10.4103/0378-6323.35731.
+}
+\item The test has a sensitivity and specificity between 70\% and 80\%. \footnote{Bourke J, Coulson I, English J, et al. Guidelines for the management of contact dermatitis: an update. \textit{Br J Dermatology.} 2008. doi:10.1111/j.1365-2133.2009.09106.x.
+}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item Dermatology specific quality of life has been shown to improve significantly more in those patients who are patch tested, because of more accurate diagnosis and earlier intervention . 
+\item Patch testing has been shown to be cost‐effective and to reduce the cost of therapy in patients with severe allergic contact dermatitis.\footnote{Rajagopalan R, Anderson RT, Sarma S, et al. An economic evaluation of patch testing in the diagnosis and management of allergic contact dermatitis. \textit{Am J Contact Dermat.} 1998;9(3):149-154.
+}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item The test relies on the fact that a sensitized individual will have primed antigen specific T cells in the body 
+\item And hence when the allergen applied will induce a reproducible inflammation at the site of application.
+
+\end{itemize}
+\end{frame}
+
+\section{Rationale}
+
+\begin{frame}{Rationale}
+\begin{itemize}
+\item ACD is a commonly encountered problem in our OPD.
+\item No scientific study till now have been done in the pattern of ACD in our country.
+\item It has great impact on quality of life of many individuals, and avoidance of allergens improves quality of life.
+
+\end{itemize}
+
+\end{frame}
+
+\section{Objectives}
+
+\begin{frame}{Objectives}
+\begin{itemize}
+\item General
+\begin{itemize}
+\item To determine the cause of ACD using patch tests.
+
+\end{itemize}
+\item Specific 
+\begin{itemize}
+\item To determine the epidemiology of ACD
+
+\item To determine the clinical patterns of ACD in patients attending the dermatology OPD.
+
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\section{Subjects and Methods}
+\begin{frame}{Subjects and Methods}
+\begin{itemize}
+\item Setting:
+\begin{itemize}
+\item Department of Dermatology, TUTH, IOM.
+
+\end{itemize}
+\item Study population:
+\begin{itemize}
+\item Out patients visiting the department of dermatology
+
+\end{itemize}
+\item Duration of study: 1 year
+\item Study design: Hospital based cross sectional \\ descriptive study
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+
+\item Sample selection :\\[5pt]
+\ul{Inclusion criteria:}
+\begin{itemize}
+\item All patients  more than 16 years who have been clinically diagnosed to have ACD,  after excluding other dermatoses like tinea, lichen planus, psoriasis by performing laboratory investigations where needed (including biopsy and skin scrapings for KOH)
+
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\ul{Exclusion criteria:}
+\begin{itemize}
+\item Those patients not willing to participate in the study.
+\item Pregnant women
+\item Patients currently taking corticosteroids or immunosuppressives
+\item Patient currently under narrow band UVB and PUVA therapy
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{block}{Sample size}
+Sample size=\textbf{$z^2p(1-p)/d^2$}
+\end{block}
+where, \\
+z=1.96, p=7.7\%, d=0.05 \\ \vspace{10pt}
+z= value from standard normal distribution corresponding to desired confidence level. (z=1.96 for 95\% CI)\\ \vspace{3pt}
+p= prevalence in population\\ \vspace{3pt}
+d=desired precision\\
+
+\end{frame}
+
+
+\begin{frame}{Continued}
+Sample size:
+\begin{itemize}
+\item Prevalence of allergic contact dermatitis in Nepal = 7.7\%.\footnote{Shrestha DP. Pattern Of Skin Diseases In A Rural Village Development Community Of Nepal. \textit{NJDVL} 2014;12(1).}
+\item According to the formula, the sample size = 109 will be taken for the study.
+
+\end{itemize}
+\end{frame}
+
+\section{Methodology}
+
+\begin{frame}{Methodology}
+\begin{itemize}
+\item All patients more than 16 years attending to TUTH dermatology OPD with allergic contact dermatitis will be included.
+\item Informed consent will be taken.
+\item Details of the patients according to the prepared proforma will be recorded. The pattern, distribution and morphology of the lesions will be noted. Diagnosis will be made clinically. Biopsy will be done wherever required.
+\item Patch testing will be done to determine the cause, using standard series of nineteen allergens.
+
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Methodology}
+Following are the allergens that will be tested:\\
+\begin{columns}
+
+\column{0.5\textwidth}
+
+\begin{itemize}
+\item Wool Alcohol (Lanolin)
+\item Perubalsam
+\item Formaldehyde
+\item Mercaptobenzothiazole
+\item Potassium bichromate
+\item Nickel sulfate
+\item Cobalt sulfate
+\item Colophony
+\item Epoxy resin
+\item Parabens mix
+
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{itemize}
+\item Paraphenylenediamine
+\item Parthenium
+\item Neomycin sulfate
+\item Benzocaine
+\item Chlorocresol
+\item Fragrance mix
+\item Thiuram mix
+\item Nitrofurozon
+\item Black rubber mix
+
+\end{itemize}	
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item The allergens are stored in a refrigerator at $4^0$C.
+\item Chambers  are used to keep the allergens to ensure occluded contact with the skin.
+\item A length of 5 mm of test substance will be kept in the chamber. 
+\item The allergens will be applied on the healthy skin of the patient's back and left for 48 hours.
+\item Patient will be instructed to not take a bath or perform heavy exercise until the readings are performed.
+\item Readings will be performed at 48 hours and 96 hours after patch testing (on day 2 and day 4). 
+
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+Reactions will be classified and documented according to the criteria of the International Contact Dermatitis Research Group (ICDRG) as follows:\footnote{Mortazavi H, Ehsani A, Sajjadi SS, et al. Patch testing in Iranian children with allergic contact dermatitis. \textit{BMC Dermatol.} 2016;16(1):10. }
+\begin{itemize}
+\item -- negative 
+\item +/--  doubtful reaction, faint erythema only 
+\item +	weak positive reaction, palpable erythema, possibly papules
+\item ++ strong positive reaction, erythema, infiltration, papule, vesicle 
+\item +++  extreme positive reaction, coalescing vesicles
+
+\end{itemize}
+\end{frame}
+
+\section{Literature Review}
+
+\begin{frame}{Literature Review}
+\includegraphics[height=20mm, width=115mm]{thes1.png}
+\vspace{3pt}
+\textbf{CONCLUSION:}\\
+Nickel sulfate, cobalt, methylisothiazolinone, and colophony are the most common allergens responsible for induction of allergic contact dermatitis in Iranian children and adolescents. Females tended to show more positive reactions to allergens.
+\end{frame}
+
+
+
+\begin{frame}{Continued}
+\includegraphics[height=25mm, width=115mm]{thes3.png}
+\vspace{5pt}
+\textbf{CONCLUSION:}\\
+Patch test reactivity to nickel sulfate was high. The pattern of contact allergy observed in this study indicates the need for large-scale investigations to identify local allergens responsible for contact allergy and for formulation of policies directed towards avoidance of exposure.
+\end{frame}
+
+\begin{frame}{Continued}
+\includegraphics[height=25mm, width=115mm]{thes5.png}
+\vspace{5pt}
+\textbf{CONCLUSION:}\\
+Nickel has been the most frequently positive allergen detected by the NACDG; rates significantly increased in the current study period and most reactions were clinically relevant. Other common allergens were topical antibiotics, preservatives, fragrance mix I and paraphenylenediamine. Testing with an expanded allergen series and supplementary allergens enhances detection of relevant positive allergens.
+\end{frame}
+
+
+
+\section{Proforma}
+\begin{frame}{Proforma}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{itemize}
+\item Patient ID
+\item Age										\item Sex: M/F
+\item Address									\item Occupation	
+\end{itemize}	
+
+\column{0.5\textwidth}
+\begin{itemize}
+\item Symptoms: Itching/ pain/ burning/ redness/ rash/ others
+\item Duration
+\item Aggravating factors:
+\item Relieving factors:
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{itemize}
+\item Past history of similar episodes
+\begin{itemize}
+\item If yes, how frequently ?
+\end{itemize}
+\item Previous treatments
+\item History of atopy:  yes/ no
+\item Past medical history
+\item Family history:  yes/no
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued}
+On Examination:\\
+\vspace{5pt}
+\textcolor{blue}{Site of lesion:}\\
+\begin{columns}
+\column[]{0.5\textwidth}
+\begin{itemize}
+\item Face
+\item Neck
+\item Chest
+\item Upper back
+\item Lower back
+\item Legs
+\end{itemize}
+\column[]{0.5\textwidth}
+\begin{itemize}
+\item Hands
+\item Forearm
+\item Arm
+\item Thighs 
+\item Feet
+\end{itemize}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Continued}
+\textcolor{blue}{Morphology of lesion:}\\
+
+\begin{itemize}
+\item erythema 
+\item papule
+\item vesicles
+\item fissuring
+\item lichenification
+\item scales
+\item edema
+\end{itemize}
+Result of patch test:\\
+\begin{itemize}
+\item At 48 hours
+\item At 96 hours
+\end{itemize}							
+
+\end{frame}
+
+
+\section{References}
+\begin{frame}{References}
+\begin{enumerate}
+\item  Mark BJ, Slavin RG. Allergic Contact Dermatitis. \textit{ Med Clin North Am.} 2006;90(1):169-185. doi:10.1016/j.mcna.2005.08.008.
+\item Zug KA, Warshaw EM, Fowler JF, et al. Patch-test results of the North American Contact Dermatitis Group 2005-2006. \textit{Dermat  contact, atopic, Occup drug.} 20(3):149-160. http://www.ncbi.nlm.nih.gov/pubmed/19470301. Accessed December 2, 2016.
+\item Kostner L, Anzengruber F, Guillod C, Recher M, Schmid-Grendelmeier P, Navarini AA. Allergic Contact Dermatitis. \textit{Immunol Allergy Clin North Am.} 2017;37(1):141-152. doi:10.1016/j.iac.2016.08.014.
+\seti
+
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\conti
+\item Cohen DE. Contact dermatitis: A quarter century perspective. \textit{J Am Acad Dermatol.} 2004;51(1):60-63. doi:10.1016/j.jaad.2003.01.002.
+\item Nelson JL, Mowad CM. Allergic Contact Dermatitis: Patch Testing Beyond the TRUE Test. \textit{J Clin Aesthet Dermatol.} 2010;3(10):36-41. http://www.ncbi.nlm.nih.gov/pubmed/20967194. Accessed November 22, 2016.
+\item Farrell AL, Warshaw EM, Zhao Y, Nelson D. Prevalence and Methodology of Patch Testing by Allergists in the United States: Results of a Cross-Sectional Survey. \textit{Am J Contact Dermat.} 2002;13(4):157-163. doi:10.1053/ajcd.2002.36642.
+
+\seti
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{enumerate}
+\conti 
+\item Jerajani HR, Melkote S. Thin-layer rapid-use epicutaneous test (TRUE test). \textit{Indian J Dermatol Venereol Leprol.} 2007;73(5):292-295. doi:10.4103/0378-6323.35731.
+\item Bourke J, Coulson I, English J, et al. Guidelines for the management of contact dermatitis: an update. \textit{Br J Dermatology.} 2008. doi:10.1111/j.1365-2133.2009.09106.x.
+\item Rajagopalan R, Anderson RT, Sarma S, et al. An economic evaluation of patch testing in the diagnosis and management of allergic contact dermatitis. \textit{Am J Contact Dermat.} 1998;9(3):149-154. 
+\seti
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Continued}
+\begin{enumerate}
+\conti
+\item Shrestha DP. Pattern Of Skin Diseases In A Rural Village Development Community Of Nepal. \textit{NJDVL} 2014;12(1).
+\item Mortazavi H, Ehsani A, Sajjadi SS, et al. Patch testing in Iranian children with allergic contact dermatitis. \textit{BMC Dermatol.} 2016;16(1):10. 
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+
+\vspace{100pt}
+\centering \huge Thank You\\
+\vspace{90pt}
+\noindent{\color{blue} \rule{\linewidth}{1mm} }
+\end{frame}
+
+
+
+
+
+
+
+\end{document}
