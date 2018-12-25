@@ -4,7 +4,7 @@ services:
   - docker
   
 environment:
-    DOCKER_OPTS: "--rm -it -v $(pwd):/tmp -w /tmp"
+    DOCKER_OPTS: "--rm -i -v $(pwd):/tmp -w /tmp"
     DOCKER_CNTR: "sumankhanal/texlive-2018"
     BLD_OPTS: "pdflatex -shell-escape -synctex=1 -interaction=nonstopmode"
 
