@@ -4,9 +4,9 @@ services:
   - docker
   
 environment:
-    DOCKER_OPTS="--rm -v $(pwd):/tmp -w /tmp"
-    DOCKER_CNTR="sumankhanal/texlive-2018"
-    BLD_OPTS="pdflatex -shell-escape -synctex=1 -interaction=nonstopmode"
+    DOCKER_OPTS: "--rm -v $(pwd):/tmp -w /tmp"
+    DOCKER_CNTR: "sumankhanal/texlive-2018"
+    BLD_OPTS: "pdflatex -shell-escape -synctex=1 -interaction=nonstopmode"
 
 build_script:
   - docker run ${DOCKER_OPTS} ${DOCKER_CNTR} ${BLD_OPTS} *.tex
