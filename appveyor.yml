@@ -4,12 +4,13 @@ services:
   - docker
   
 environment:
-    DOCKER_OPTS: "--rm -v $(pwd):/tmp -w /tmp"
+    DOCKER_OPTS: "--rm -it -v $(pwd):/tmp -w /tmp"
     DOCKER_CNTR: "sumankhanal/texlive-2018"
     BLD_OPTS: "pdflatex -shell-escape -synctex=1 -interaction=nonstopmode"
 
 build_script:
-  - docker run ${DOCKER_OPTS} ${DOCKER_CNTR} for i in *.tex; do ${BLD_OPTS} $i;done
+  - docker run ${DOCKER_OPTS} ${DOCKER_CNTR} 
+  - for i in *.tex; do ${BLD_OPTS} $i;done
 
 
 artifacts:
