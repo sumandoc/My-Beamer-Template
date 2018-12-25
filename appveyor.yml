@@ -2,10 +2,14 @@ version: 1.0.{build}
 image: ubuntu1804
 services:
   - docker
-
+  
+environment:
+  DOCKER_OPTS="--rm -v $(pwd):/tmp -w /tmp"
+  DOCKER_CNTR="sumankhanal/texlive-2018"
+  BLD_OPTS="pdflatex -shell-escape -synctex=1 -interaction=nonstopmode"
 
 build_script:
-  - docker run --rm -v $(pwd):/tmp -w /tmp sumankhanal/texlive-2018 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Sample_size.tex
+  - docker run ${DOCKER_OPTS} ${DOCKER_CNTR} ${BLD_OPTS} *.tex
 
 
 artifacts:
