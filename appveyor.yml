@@ -5,7 +5,7 @@ services:
 
 
 build_script:
-  - docker run --rm -v $(pwd):/tmp -w /tmp pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Sample_size.tex
+  - docker run --rm -v $(pwd):/tmp -w /tmp sumankhanal/texlive-2018 pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Sample_size.tex
 
 
 artifacts:
