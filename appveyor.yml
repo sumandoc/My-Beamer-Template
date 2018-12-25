@@ -1,0 +1,21 @@
+version: 1.0.{build}
+image: ubuntu1804
+services:
+  - docker
+
+
+test_script:
+  - docker run --rm -ti -v $(pwd):/tmp -w /tmp pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Sample_size.tex
+
+
+artifacts:
+  - path: '*.pdf'
+    name: MyApp
+
+
+
+
+
+
+
+
