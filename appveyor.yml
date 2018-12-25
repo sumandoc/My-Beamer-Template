@@ -4,7 +4,7 @@ services:
   - docker
 
 
-test_script:
+build_script:
   - docker run --rm -ti -v $(pwd):/tmp -w /tmp pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Sample_size.tex
 
 
