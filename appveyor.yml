@@ -9,7 +9,7 @@ environment:
     BLD_OPTS: "pdflatex -shell-escape -synctex=1 -interaction=nonstopmode"
 
 build_script:
-  - docker run ${DOCKER_OPTS} ${DOCKER_CNTR} latexmk -lualatex
+  - docker run ${DOCKER_OPTS} ${DOCKER_CNTR} latexmk -pdf
 
 
 artifacts:
