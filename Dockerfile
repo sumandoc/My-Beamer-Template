@@ -30,6 +30,8 @@ RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate base" >> ~/.bashrc \
     && conda update -y --all \
+    && conda install -y numpy scipy seaborn \
+    cython jupyter notebook scikit-learn scikit-image \
     && conda clean -y -t
 
 ENV TINI_VERSION v0.18.0
@@ -45,4 +47,7 @@ USER ${NB_USER}
 WORKDIR ${HOME}
 
 
+EXPOSE 8888
 
+#CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
