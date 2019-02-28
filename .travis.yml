@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker run -it -v $pwd:/tmp -w /tmp sumankhanal/texlive-2018 bin/bash
+  - docker run -it sumankhanal/texlive-2018 bin/bash
   
 script:
   - pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Beautiful_template.tex
