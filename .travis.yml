@@ -3,7 +3,8 @@ services:
   - docker
 
 before_install:
-  - sudo docker run -it sumankhanal/texlive-2018 bin/bash
+  - docker build -t sumankhanal/miniconda3 .
   
-script:
-  - pdflatex -shell-escape -synctex=1 -interaction=nonstopmode Beautiful_template.tex
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push sumankhanal/miniconda3
