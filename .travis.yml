@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t sumankhanal/pichu .
+  - docker build -t sumankhanal/miniconda3 .
   
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push sumankhanal/pichu
+  - docker push sumankhanal/miniconda3
