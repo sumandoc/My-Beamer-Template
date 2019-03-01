@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-- docker run -i -v $pwd:/tmp -w /tmp sumankhanal/texlive-2018 bin/bash
+- docker run -it sumankhanal/texlive-2018 bin/bash
 
 script:
 - latexmk -pdf
