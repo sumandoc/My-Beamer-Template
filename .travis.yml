@@ -8,4 +8,4 @@ before_install:
 
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-- docker push sumankhanal/texive-2017
+- docker push sumankhanal/texlive-2017
