@@ -1,4 +1,4 @@
-FROM debian:sid
+FROM debian:sid AS base
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PANDOC=2.6
@@ -26,3 +26,7 @@ ENV PATH /usr/local/texlive/2017/bin/x86_64-linux:$PATH
 WORKDIR /home
 
 CMD ["tlmgr", "--version"]
+
+FROM base
+RUN tlmgr update --self --all
+
