@@ -4,7 +4,8 @@ services:
   - docker
 
 before_install:
-- docker run -it sumankhanal/texlive-2018 bin/bash
+- docker build -t sumankhanal/texive-2017 .
 
 script:
-- latexmk -pdf
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+- docker push sumankhanal/texive-2017
