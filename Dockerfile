@@ -1,4 +1,4 @@
-FROM debian:sid AS stoop
+FROM debian:sid
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PANDOC=2.6
@@ -21,7 +21,3 @@ RUN curl -sL curl -sL http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/
 ENV PATH /usr/local/texlive/2017/bin/x86_64-linux:$PATH
 WORKDIR /home
 CMD ["tlmgr", "--version"]
-
-FROM stoop AS lyang
-RUN tlmgr update --self --all
-
