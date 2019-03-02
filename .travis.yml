@@ -4,8 +4,8 @@ services:
   - docker
 
 before_install:
-- docker build -t sumankhanal/texlive-2017 .
+- docker build -t sumankhanal/texlive-2018 .
 
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-- docker push sumankhanal/texlive-2017
+- docker push sumankhanal/texlive-2018
