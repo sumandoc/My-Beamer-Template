@@ -1,0 +1,9 @@
+image: ubuntu
+
+services:
+- docker
+
+test_script:
+- docker run -it sumankhanal/coursera-edx -v $PWD:/tmp -w /tmp edx-dl -u suman12029@yahoo.co.uk -p Kathmandu123 https://courses.edx.org/courses/course-v1:Microsoft+DAT273x+1T2019a/course/
+
+
