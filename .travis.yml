@@ -1,11 +1,23 @@
-language: bash
-
-services:
-  - docker
-
+language: python
+python:
+  - 3.7 
+# command to install dependencies
 before_install:
-- docker build -t sumankhanal/texlive-2018 .
+  - sudo apt-get update
+  - sudo apt-get install -y p7zip
+install:
+  - pip install coursera-dl edx-dl
 
+
+# command to run tests
 script:
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-- docker push sumankhanal/texlive-2018
+  - edx-dl -u suman12029@yahoo.co.uk -p Kathmandu123 https://courses.edx.org/courses/course-v1:Microsoft+DAT276x+1T2019a/course/
+  - 7za a myapp.zip Downloaded/**/*.mp4
+  
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: myapp.zip
+  skip_cleanup: true
+  on:
+    tags: false
