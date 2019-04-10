@@ -1,0 +1,37 @@
+{
+    "package": {
+        "name": "video",
+        "repo": "edx",
+        "subject": "sumankhanal",
+        "desc": "I was pushed completely automatically",
+        "website_url": "www.jfrog.com",
+        "issue_tracker_url": "https://github.com/sumanstats/coursera-edx/issues",
+        "vcs_url": "https://github.com/sumanstats/coursera-edx",
+        "github_use_tag_release_notes": false,
+        "licenses": ["MIT"],
+        "public_download_numbers": true,
+        "public_stats": false        
+    },
+
+    "version": {
+        "name": "0.5",
+        "desc": "This is a version",
+        "released": "2019-04-10",
+        "vcs_tag": "0.5",
+        "gpgSign": false
+    },
+
+    "files":
+        [
+        {"includePattern": "Downloaded/**/*.mp4", "uploadPattern": "/$1"}
+        ],
+    "publish": true
+}
+
+
+
+
+
+
+
+
