@@ -19,10 +19,10 @@ cache:
   
 deploy:
   provider: bintray
+  skip_cleanup: true
   file: file1.json
   user: sumankhanal
   key: $BTRAY
-  skip_cleanup: true 
   on:
     all_branches: true
     tags: false
