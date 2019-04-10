@@ -12,14 +12,14 @@ script:
   - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
   - 7za a -tzip myapp.zip -r Downloaded/*.mp4
 
-before_deploy:
-  - export TRAVIS_TAG="1.0.$TRAVIS_BUILD_NUMBER"
+#before_deploy:
+#  - export TRAVIS_TAG="1.0.$TRAVIS_BUILD_NUMBER"
   
   
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  tag_name: $TRAVIS_TAG
+  #tag_name: $TRAVIS_TAG
   file_glob: true
   file: myapp.zip
   overwrite: true
