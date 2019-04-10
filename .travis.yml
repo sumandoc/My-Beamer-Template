@@ -14,10 +14,10 @@ script:
   
 deploy:
   provider: releases
-  all_branches: true
   api_key: $GITHUB_TOKEN
   file_glob: true
   file: Downloaded/**/*.mp4
   skip_cleanup: true
   on:
+    all_branches: true
     tags: false
