@@ -10,13 +10,13 @@ install:
 # command to run tests
 script:
   - edx-dl -u $USER -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
-  #- 7za a -tzip myapp.zip -r Downloaded/*.mp4
+  - 7za a -tzip myapp.zip -r Downloaded/*.mp4
   
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  file_glob: true
-  file: Downloaded/*
+  #file_glob: true
+  file: myapp.zip
   skip_cleanup: true
   on:
     tags: false
