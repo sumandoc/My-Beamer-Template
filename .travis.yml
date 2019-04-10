@@ -12,11 +12,11 @@ install:
 # command to run tests
 script:
   - edx-dl -u suman12029@yahoo.co.uk -p Kathmandu123 https://courses.edx.org/courses/course-v1:Microsoft+DAT276x+1T2019a/course/
-  - 7za a myapp.zip Downloaded/**/*.mp4
+  - 7za a -tzip myapp.zip -r Downloaded\*.mp4
   
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key: $GITHUB_TOKEN
   file: myapp.zip
   skip_cleanup: true
   on:
