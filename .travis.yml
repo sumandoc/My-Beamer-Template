@@ -17,7 +17,8 @@ script:
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  file: "myapp.zip"
+  file_glob: true
+  file: directory/**/*.mp4
   skip_cleanup: true
   on:
     tags: false
