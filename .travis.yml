@@ -7,24 +7,42 @@ install:
   - pip install coursera-dl edx-dl
 
 
+
+
 # command to run tests
 script:
   - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
+  
+cache:
+   directories:
+    - Downloaded/
+script:
   - 7za a -tzip myapp.zip -r Downloaded/*.mp4
 
 #before_deploy:
 #  - export TRAVIS_TAG="1.0.$TRAVIS_BUILD_NUMBER"
   
   
+// deploy:
+//   provider: releases
+//   api_key: $GITHUB_TOKEN
+//   #tag_name: $TRAVIS_TAG
+//   file_glob: true
+//   file: myapp.zip
+//   overwrite: true
+//   skip_cleanup: true
+//   on:
+//     repo: sumanstats/My-LaTeX-Stuff
+//     all_branches: true
+//     tags: true
+
+
 deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  #tag_name: $TRAVIS_TAG
-  file_glob: true
-  file: myapp.zip
-  overwrite: true
-  skip_cleanup: true
+  provider: bintray
+  file: file1.json
+  user: sumankhanal
+  key: $BTRAY
+  skip_cleanup: true 
   on:
-    repo: sumanstats/My-LaTeX-Stuff
     all_branches: true
-    tags: true
+    tags: false
