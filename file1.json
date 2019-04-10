@@ -23,7 +23,7 @@
 
     "files":
         [
-        {"includePattern": "Downloaded/**/*.mp4", "uploadPattern": "/$1"}
+        {"includePattern": "Downloaded/**/(*.mp4)", "uploadPattern": "/$1"}
         ],
     "publish": true
 }
