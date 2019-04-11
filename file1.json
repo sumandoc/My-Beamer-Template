@@ -3,7 +3,7 @@
         "name": "video",
         "repo": "edx",
         "subject": "sumankhanal",
-        "desc": "I was pushed completely automatically",
+        "desc": "Pushing artifacts",
         "website_url": "www.jfrog.com",
         "issue_tracker_url": "https://github.com/sumanstats/coursera-edx/issues",
         "vcs_url": "https://github.com/sumanstats/coursera-edx",
@@ -23,7 +23,7 @@
 
     "files":
         [
-        {"includePattern": "./(*.zip)", "uploadPattern": "/$1"}
+        {"includePattern": "\./(*.zip)", "uploadPattern": "/$1"}
         ],
     "publish": true
 }
