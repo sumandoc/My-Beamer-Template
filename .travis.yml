@@ -21,13 +21,13 @@ script:
     
 deploy:
   provider: bintray
+  file: file1.json
   skip_cleanup: true
-  file: "file1.json"
   user: sumankhanal
   key: $BTRAY
   on:
     all_branches: true
-    tags: false
+    tags: true
 
 
 
