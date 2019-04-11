@@ -27,7 +27,7 @@ deploy:
   key: $BTRAY
   on:
     all_branches: true
-    tags: true
+    tags: false
 
 
 
