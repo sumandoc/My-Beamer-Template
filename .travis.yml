@@ -13,7 +13,7 @@ before_script:
 
 # command to run tests
 script:
-  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
+  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:MITx+21A.819.1x+1T2019/course/
   - 7za a -tzip myapp.zip -r Downloaded/
   - rm -rf Downloaded/
   
@@ -22,7 +22,7 @@ script:
 deploy:
   provider: bintray
   skip_cleanup: true
-  file: file1.json
+  file: "file1.json"
   user: sumankhanal
   key: $BTRAY
   on:
