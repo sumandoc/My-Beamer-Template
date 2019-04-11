@@ -7,7 +7,9 @@ install:
   - pip install coursera-dl edx-dl
 
 
-
+before_script:
+  - mkdir project
+  - cd project
 
 # command to run tests
 script:
