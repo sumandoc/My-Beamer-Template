@@ -11,8 +11,7 @@ install:
 
 # command to run tests
 script:
-  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:HarvardX+PH125.6x+1T2019/course/
-  #https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
+  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
   - 7za a -tzip myapp.zip -r Downloaded/
   
 
