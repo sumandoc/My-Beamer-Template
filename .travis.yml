@@ -13,7 +13,7 @@ before_script:
 
 # command to run tests
 script:
-  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:UTAustinX+UT.P4C.14.01x+2T2018/course/
+  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/DavidsonX/D003x.2/2T2015/course/
   - 7za a -tzip myapp.zip -r Downloaded/
   #- rm -rf Downloaded/
   
