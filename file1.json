@@ -23,7 +23,7 @@
 
     "files":
         [
-        {"includePattern": "\./(*.zip)", "uploadPattern": "/$1"}
+        {"includePattern": "project/(*.zip)", "uploadPattern": "/$1"}
         ],
     "publish": true
 }
