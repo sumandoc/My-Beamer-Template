@@ -7,27 +7,17 @@ install:
   - pip install coursera-dl edx-dl
 
 
-before_script:
-  - mkdir project
-  - cd project
 
 # command to run tests
 script:
-  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/DavidsonX/D003x.2/2T2015/course/
+  - curl -fL https://getcli.jfrog.io | sh
+  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:MDAndersonX+CERTaIN.1x+3T2018/course/
   - 7za a -tzip myapp.zip -r Downloaded/
   - rm -rf Downloaded/
+  - jfrog --user=sumankhanal --key=$BTRAY --publish=true --override=true bt u myapp.zip sumankhanal/edx/video
   
 
     
-deploy:
-  provider: bintray
-  file: file1.json
-  skip_cleanup: true
-  user: sumankhanal
-  key: $BTRAY
-  on:
-    tags: false
-
 
 
 # deploy:
