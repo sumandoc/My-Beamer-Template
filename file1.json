@@ -23,7 +23,7 @@
 
     "files":
         [
-        {"includePattern": "project/(*.zip)", "uploadPattern": "/$1",
+        {"includePattern": "Downloaded/(**/*)", "uploadPattern": "/$1",
         "matrixParams": {
         "override": 1 }
         }
