@@ -12,10 +12,10 @@ install:
 script:
   - curl -fL https://getcli.jfrog.io | sh
   - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
-  - 7za a -tzip myapp.zip -r Downloaded/
-  - rm -rf Downloaded/
+  #- 7za a -tzip myapp.zip -r Downloaded/
+  #- rm -rf Downloaded/
   - ./jfrog bt config --user=sumankhanal --key=$BTRAY --interactive=false
-  - ./jfrog bt u "myapp.zip" "sumankhanal/edx/video/0.1" --publish=true
+  - ./jfrog bt u "Downloaded/**/*" "sumankhanal/edx/video/0.1" --publish=true
   
 
 
