@@ -15,7 +15,7 @@ script:
   - 7za a -tzip myapp.zip -r Downloaded/
   - rm -rf Downloaded/
   - ./jfrog bt config --user=sumankhanal --key=$BTRAY --interactive=false
-  - ./jfrog bt u myapp.zip "sumankhanal/edx/video" --publish=true
+  - ./jfrog bt u myapp.zip sumankhanal/edx/video --publish=true
   
 
 
