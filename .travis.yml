@@ -10,12 +10,12 @@ install:
 
 # command to run tests
 script:
-  #- curl -fL https://getcli.jfrog.io | sh
+  - curl -fL https://getcli.jfrog.io | sh
   - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:MDAndersonX+CERTaIN.1x+3T2018/course/
   - 7za a -tzip myapp.zip -r Downloaded/
   - rm -rf Downloaded/
   - ./jfrog bt config --user=sumankhanal --key=$BTRAY --interactive=false
-  - ./jfrog bt u myapp.zip "sumankhanal/edx/video"
+  - ./jfrog bt u "myapp.zip" "sumankhanal/edx/video"
   
 
 
