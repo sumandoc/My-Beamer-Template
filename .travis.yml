@@ -15,7 +15,7 @@ script:
   - 7za a -tzip myapp.zip -r Downloaded/
   - rm -rf Downloaded/
   - export JFROG_CLI_HOME_DIR=~/.jfrog
-  - jfrog bt --user=sumankhanal --key=$BTRAY --publish=true --override=true u myapp.zip sumankhanal/edx/video
+  - ./jfrog bt u --user=sumankhanal --key=$BTRAY --publish=true --override=true myapp.zip sumankhanal/edx/video
   
 
 
