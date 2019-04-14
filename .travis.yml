@@ -14,11 +14,8 @@ script:
   - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:MDAndersonX+CERTaIN.1x+3T2018/course/
   - 7za a -tzip myapp.zip -r Downloaded/
   - rm -rf Downloaded/
-  #- export JFROG_CLI_OFFER_CONFIG=false && ./jfrog --user=sumankhanal --key=$BTRAY --publish=true --override=true bt u myapp.zip sumankhanal/edx/video
-  - API_JSON=$(printf '{"tag_name": "v%s","target_commitish": "master","name": "v%s","body": "Release of version %s","draft": true,"prerelease": true}' 1 0 0)
-  - curl --data=myapp.zip "$API_JSON" https://api.github.com/repos/sumanstats/My-LaTeX-Stuff/releases?access_token=$GITHUB_TOKEN
-
-    
+  - ./jfrog --user=sumankhanal --key=$BTRAY --publish=true --override=true bt u myapp.zip sumankhanal/edx/video
+  
 
 
 # deploy:
