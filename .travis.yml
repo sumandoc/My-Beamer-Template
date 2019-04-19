@@ -11,7 +11,7 @@ install:
 # command to run tests
 script:
   - curl -fL https://getcli.jfrog.io | sh
-  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/HarvardX/HSPH-HMS214x/2013_SOND/course/
+  - edx-dl -u $NAME -p $PASS https://courses.edx.org/courses/course-v1:MITx+15.071x+1T2019/course/
   #- 7za a -tzip myapp.zip -r Downloaded/
   #- rm -rf Downloaded/
   #- ./jfrog bt config --user=sumankhanal --key=$BTRAY --interactive=false
